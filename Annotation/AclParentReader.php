@@ -99,10 +99,10 @@ class AclParentReader
     {
         if(isset($classesMap['parent']))
             return array_merge(
-                array($classesMap['class']),
+                array($classesMap['metadata']->name),
                 $this->classesMap_to_list($classesMap['parent'])
             );
 
-        return array($classesMap['class']);
+        return array($classesMap['metadata']->name);
     }
 } 

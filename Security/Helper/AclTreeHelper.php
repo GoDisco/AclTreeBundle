@@ -113,7 +113,7 @@ class AclTreeHelper
         //Build the Acl query for the tree
         $aclQuery = $this->getAclQuery($classesMap, $mask, $user);
         $query->setHint('acl.query', $aclQuery);
-
+        
         //add master alias
         $query->setHint('acl.original.dqlAlias', $queryBuilder->getRootAliases()[0]);
 

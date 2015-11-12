@@ -28,6 +28,9 @@ class AclTreeWalker extends SqlWalker
 
         $extraQuery = $this->getQuery()->getHint('acl.query');
         $classesMap = $this->getQuery()->getHint('acl.tree.classes.map');
+
+
+
         $rootTableAlias = $this->getSQLTableAlias(
             $classesMap['metadata']->table['name'],
             $this->getQuery()->getHint('acl.original.dqlAlias')
@@ -69,7 +72,7 @@ class AclTreeWalker extends SqlWalker
      * @return string
      */
     private function buildOn($classesMap, $alias, $lvl=0) {
-        $class = $this->escapeNamespace($classesMap['class']);
+        $class = $this->escapeNamespace($classesMap['metadata']->name);
         $ID = $classesMap['metadata']->getSingleIdentifierColumnName();
         $sql = "( acl_.class = \"{$class}\" AND acl_.id={$alias}.{$ID} )";
 
