@@ -10,6 +10,10 @@
             "name": "AlmogBaku",
             "email": "almog@SocialBelong.com",
             "homepage": "http://www.AlmogBaku.com"
+        },
+        {
+          "name": "MilosZivanovic",
+          "email": "miloszivanovic@gmail.com"
         }
     ],
     "require": {
